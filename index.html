@@ -3,12 +3,43 @@
   <head>
     <title>SawKeBlute</title>
   </head>
+  <style>
+    body {
+      background-color: black;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      text-align: center;
+    }
+    h1 {
+      color: crimson;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    }
+    img {
+      width: 320px;
+      height: 450px;
+      border-radius: 25px;
+      background-color: aliceblue;
+      border-style: double;
+    }
+    button {
+      padding: 10px;
+      border-radius: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-top: 20px;
+      color: crimson;
+    }
+  </style>
   <body>
-    <h1>Head & Tail Project</h1>
+    <div>
+      <h1>Head & Tail Project</h1>
 
-    <h2 id="coinFace">Head</h2>
-
-    <button id="flipButton">Flip</button>
+      <!-- <h2 id="coinFace">Head</h2> -->
+      <img id="coinFace" src="Images/head.png" />
+      <br />
+      <button id="flipButton">Flip</button>
+    </div>
   </body>
 
   <script>
@@ -23,11 +54,11 @@
       const randomNumber = Math.floor(Math.random() * 2);
       if (randomNumber === 0) {
         console.log("Head");
-        coinFaceElement.innerText = "Head";
+        coinFaceElement.src = "Images/head.png";
       }
       if (randomNumber === 1) {
         console.log("Tail");
-        coinFaceElement.innerText = "Tail";
+        coinFaceElement.src = "Images/tail.png";
       }
     };
   </script>
